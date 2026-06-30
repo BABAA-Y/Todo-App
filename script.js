@@ -85,6 +85,7 @@
 
     console.log(tododata);
     input.value = "";
+    console.log("Learning Git");
   });
 
   clr.addEventListener("click", () => {
