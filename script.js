@@ -84,8 +84,6 @@
     console.log(localStorage.getItem("tododata"));
 
     console.log(tododata);
-    input.value = "";
-    console.log("Learning Git");
   });
 
   clr.addEventListener("click", () => {
