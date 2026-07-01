@@ -84,6 +84,7 @@
     console.log(localStorage.getItem("tododata"));
 
     console.log(tododata);
+    input.value = "";
   });
 
   clr.addEventListener("click", () => {
