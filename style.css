@@ -269,3 +269,59 @@ button:active {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.2); }
+
+/* ------------------------------------- */
+/* 13. Mobile Responsiveness */
+/* ------------------------------------- */
+@media screen and (max-width: 600px) {
+  html {
+    padding: 20px 10px;
+  }
+  
+  body {
+    padding: 30px 20px;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  /* Make the Todo item grid stack a bit better on tight screens */
+  #todospace > div {
+    grid-template-areas: 
+      "check text text"
+      "editin editin editin"
+      "editbtn . rmbtn";
+    grid-template-columns: min-content 1fr min-content;
+    gap: 12px 10px;
+    padding: 16px;
+  }
+  
+  /* Adjust Checkbox Size */
+  #todospace > div > input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Reduce button padding for mobile */
+  #todospace > div > button:nth-of-type(1),
+  #todospace > div > button:nth-of-type(2) {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  /* Ensure the main buttons fit side-by-side */
+  #todosave, #todoclear {
+    padding: 14px;
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* On very small phones, stack the main buttons */
+  #todosave, #todoclear {
+    width: 100%;
+    float: none;
+    margin-bottom: 15px;
+  }
+}
