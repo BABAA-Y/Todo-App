@@ -11,7 +11,7 @@
 /* 1. Ultra Premium Background */
 html {
   background-color: #050505;
-  background-image: 
+  background-image:
     radial-gradient(circle at 15% 0%, rgba(58, 30, 163, 0.25) 0%, transparent 40%),
     radial-gradient(circle at 85% 100%, rgba(0, 201, 255, 0.15) 0%, transparent 40%);
   min-height: 100vh;
@@ -31,7 +31,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 50px;
   border-radius: 30px;
-  box-shadow: 
+  box-shadow:
     0 24px 64px -12px rgba(0, 0, 0, 0.8),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   color: #ededed;
@@ -69,7 +69,7 @@ h1 {
 #todoinput:focus {
   border-color: rgba(0, 201, 255, 0.5);
   background: rgba(0, 0, 0, 0.5);
-  box-shadow: 
+  box-shadow:
     inset 0 2px 4px rgba(0, 0, 0, 0.2),
     0 0 0 4px rgba(0, 201, 255, 0.15);
 }
@@ -93,7 +93,8 @@ button:active {
   transform: scale(0.96);
 }
 
-#todosave, #todoclear {
+#todosave,
+#todoclear {
   width: 48%;
   padding: 16px;
   margin-bottom: 40px;
@@ -133,13 +134,13 @@ button:active {
 }
 
 /* 7. Individual Item Card */
-#todospace > div {
+#todospace>div {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: 20px;
   padding: 24px;
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "check text text text"
     ". editin editbtn rmbtn";
   grid-template-columns: min-content 1fr min-content min-content;
@@ -149,7 +150,7 @@ button:active {
   animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-#todospace > div:hover {
+#todospace>div:hover {
   background: rgba(255, 255, 255, 0.04);
   border-color: rgba(255, 255, 255, 0.12);
   transform: translateY(-4px) scale(1.01);
@@ -157,12 +158,19 @@ button:active {
 }
 
 @keyframes slideUpFade {
-  from { opacity: 0; transform: translateY(30px) scale(0.95); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* 8. Fully Custom CSS Checkbox MAGIC */
-#todospace > div > input[type="checkbox"] {
+#todospace>div>input[type="checkbox"] {
   grid-area: check;
   appearance: none;
   -webkit-appearance: none;
@@ -176,20 +184,20 @@ button:active {
   background: rgba(0, 0, 0, 0.2);
 }
 
-#todospace > div > input[type="checkbox"]:hover {
+#todospace>div>input[type="checkbox"]:hover {
   border-color: #00C9FF;
   background: rgba(0, 201, 255, 0.05);
   transform: scale(1.1);
 }
 
-#todospace > div > input[type="checkbox"]:checked {
+#todospace>div>input[type="checkbox"]:checked {
   background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%);
   border-color: transparent;
   box-shadow: 0 0 20px rgba(0, 201, 255, 0.5);
   transform: scale(1.1);
 }
 
-#todospace > div > input[type="checkbox"]:checked::after {
+#todospace>div>input[type="checkbox"]:checked::after {
   content: '✓';
   position: absolute;
   top: 48%;
@@ -201,7 +209,7 @@ button:active {
 }
 
 /* 9. Todo Text */
-#todospace > div > p {
+#todospace>div>p {
   grid-area: text;
   font-size: 1.2rem;
   line-height: 1.5;
@@ -211,13 +219,13 @@ button:active {
   color: #ededed;
 }
 
-#todospace > div > p.check {
+#todospace>div>p.check {
   text-decoration: line-through;
   color: rgba(255, 255, 255, 0.15);
 }
 
 /* 10. Edit Input */
-#todospace > div > input:not([type="checkbox"]) {
+#todospace>div>input:not([type="checkbox"]) {
   grid-area: editin;
   padding: 12px 16px;
   border-radius: 10px;
@@ -230,14 +238,14 @@ button:active {
   transition: all 0.3s;
 }
 
-#todospace > div > input:not([type="checkbox"]):focus {
+#todospace>div>input:not([type="checkbox"]):focus {
   border-color: rgba(146, 254, 157, 0.6);
   background: rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 0 3px rgba(146, 254, 157, 0.1);
 }
 
 /* 11. Edit Button */
-#todospace > div > button:nth-of-type(1) {
+#todospace>div>button:nth-of-type(1) {
   grid-area: editbtn;
   background: rgba(255, 255, 255, 0.03);
   color: #ededed;
@@ -245,13 +253,13 @@ button:active {
   padding: 12px 20px;
 }
 
-#todospace > div > button:nth-of-type(1):hover {
+#todospace>div>button:nth-of-type(1):hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* 12. Remove Button */
-#todospace > div > button:nth-of-type(2) {
+#todospace>div>button:nth-of-type(2) {
   grid-area: rmbtn;
   background: rgba(255, 71, 87, 0.05);
   color: #ff4757;
@@ -259,16 +267,28 @@ button:active {
   padding: 12px 20px;
 }
 
-#todospace > div > button:nth-of-type(2):hover {
+#todospace>div>button:nth-of-type(2):hover {
   background: rgba(255, 71, 87, 0.15);
   border-color: #ff4757;
 }
 
 /* Custom Scrollbar */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 10px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.2); }
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
 
 /* ------------------------------------- */
 /* 13. Mobile Responsiveness */
@@ -277,18 +297,18 @@ button:active {
   html {
     padding: 20px 10px;
   }
-  
+
   body {
     padding: 30px 20px;
   }
-  
+
   h1 {
     font-size: 2.2rem;
   }
-  
+
   /* Make the Todo item grid stack a bit better on tight screens */
-  #todospace > div {
-    grid-template-areas: 
+  #todospace>div {
+    grid-template-areas:
       "check text text"
       "editin editin editin"
       "editbtn . rmbtn";
@@ -296,30 +316,33 @@ button:active {
     gap: 12px 10px;
     padding: 16px;
   }
-  
+
   /* Adjust Checkbox Size */
-  #todospace > div > input[type="checkbox"] {
+  #todospace>div>input[type="checkbox"] {
     width: 24px;
     height: 24px;
   }
-  
+
   /* Reduce button padding for mobile */
-  #todospace > div > button:nth-of-type(1),
-  #todospace > div > button:nth-of-type(2) {
+  #todospace>div>button:nth-of-type(1),
+  #todospace>div>button:nth-of-type(2) {
     padding: 10px 12px;
     font-size: 0.9rem;
   }
-  
+
   /* Ensure the main buttons fit side-by-side */
-  #todosave, #todoclear {
+  #todosave,
+  #todoclear {
     padding: 14px;
     font-size: 0.95rem;
   }
 }
 
 @media screen and (max-width: 400px) {
+
   /* On very small phones, stack the main buttons */
-  #todosave, #todoclear {
+  #todosave,
+  #todoclear {
     width: 100%;
     float: none;
     margin-bottom: 15px;
